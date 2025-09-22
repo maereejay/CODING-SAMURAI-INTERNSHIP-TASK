@@ -1,0 +1,27 @@
+.themetoggle {
+  border: 1px solid var(--stroke-color);
+  border-radius: 15px;
+  padding: 4px;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+.themeicon {
+  color: transparent;
+  height: 25px;
+  cursor: pointer;
+}
+.sun:hover {
+  color: var(--sun-color);
+}
+.moon:hover {
+  color: var(--moon-color);
+}
+.activeSun {
+  color: var(--sun-color);
+}
+
+.activeMoon {
+  color: var(--moon-color);
+}

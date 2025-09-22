@@ -1,0 +1,125 @@
+.navbar {
+  border: 1px solid blue;
+  width: 85%;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0;
+  padding: 0.3%;
+
+  background-color: var(--navNbutton-color);
+}
+.Name {
+  width: 70%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+}
+.Name h1 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--nameheader-font);
+  font-size: 120%;
+  color: var(--white);
+  font-weight: bold;
+}
+.Name span {
+  margin-left: 3%;
+  font-family: var(--name-font);
+  font-size: 12px;
+  color: var(--buttonText);
+}
+.navlinks {
+  margin: 0;
+  width: 30%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navlinks ul {
+  margin: 0;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+  padding: none;
+}
+.navlinks > ul > li {
+  font-family: var(--paragraph-font);
+  font-size: 100%;
+  list-style: none;
+  display: inline-block;
+  color: var(--white);
+}
+
+/* 📱 Small devices (phones) */
+@media (max-width: 768px) {
+  .Name {
+    width: 70%;
+  }
+
+  .Name h1 {
+    font-size: 70%; /* reduce from 120% */
+  }
+
+  .Name span {
+    font-size: 10px; /* reduce from 12px */
+  }
+
+  .navlinks {
+    width: 30%;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .navlinks ul {
+    display: flex;
+    flex-wrap: wrap; /* ✅ keeps li inside */
+    justify-content: flex-start;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navlinks > ul > li {
+    font-size: 50%;
+    margin: 0 0.5rem;
+    list-style: none;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .Name {
+    width: 65%;
+  }
+
+  .Name h1 {
+    font-size: 50%;
+  }
+
+  .Name span {
+    font-size: 9px;
+  }
+
+  .navlinks {
+    width: 35%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .navlinks ul {
+    width: 100%;
+    gap: 0.1em;
+    margin-left: 0.2em;
+  }
+
+  .navlinks > ul > li {
+    font-size: 50%;
+  }
+}
