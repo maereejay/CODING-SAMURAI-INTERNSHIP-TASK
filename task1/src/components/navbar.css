@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .navbar {
   border: 1px solid blue;
   width: 85%;
@@ -8,7 +13,6 @@
   flex-direction: row;
   margin: 0;
   padding: 0.3%;
-
   background-color: var(--navNbutton-color);
 }
 .Name {

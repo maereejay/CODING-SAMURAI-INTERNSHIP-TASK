@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.projectView {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectviewContent {
+  width: 93%;
+  height: fit-content;
+  background-color: var(--projectViewColor);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  padding: 3% 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  border: 2px solid var(--white);
+  z-index: 100;
+}
+
+.projectviewImage {
+  border: 1px solid white;
+  width: 550px;
+  height: 450px;
+}
+.projectviewDescription {
+  width: 500px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2%;
+  padding: 2% 0;
+}
+
+.projectviewDescription h1 {
+  font-family: var(--heading-font);
+  color: var(--white);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 42px;
+}
+
+.projectviewDescription p {
+  margin-top: 2%;
+  font-family: var(--paragraph-font);
+  color: var(--white);
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 400;
+}
+
+.buttons {
+  margin-top: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+
+.buttons button {
+  padding: 0.7em 1.7em;
+  background: linear-gradient(90deg, #2979ff 0%, #18ffff 100%);
+  font-weight: bold;
+  font-family: var(--button-font);
+  border-radius: 7px;
+  color: var(--white);
+  border: 1px solid black;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  cursor: pointer;
+}
+
+.close {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.close button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--button-font);
+  cursor: pointer;
+  font-size: 1em;
+  padding-bottom: 0.5%;
+  border-bottom: 1.5px solid white;
+}
+
+.close button:hover {
+  color: red;
+  border-color: red;
+}
