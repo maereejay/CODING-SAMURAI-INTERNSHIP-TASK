@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .navbar {
-  border: 1px solid blue;
+  border: 1px solid var(--outline);
   width: 85%;
   border-radius: 25px;
   display: flex;
@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0.3%;
   background-color: var(--navNbutton-color);
+  z-index: 50;
 }
 .Name {
   width: 70%;
@@ -59,6 +60,14 @@
   list-style: none;
   display: inline-block;
   color: var(--white);
+  transition: all ease-in-out 0.2s;
+}
+
+.navlinks > ul > li:hover {
+  color: var(--buttonText);
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid white;
 }
 
 /* 📱 Small devices (phones) */

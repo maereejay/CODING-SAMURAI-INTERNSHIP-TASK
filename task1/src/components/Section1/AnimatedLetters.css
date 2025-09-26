@@ -1,0 +1,52 @@
+.animated-letters {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: var(--name-font);
+  font-size: clamp(0.7rem, 2.5vw, 1.5rem);
+  cursor: pointer;
+}
+
+.animated-letter {
+  display: inline-block;
+  will-change: transform;
+
+  animation: te-float 2.6s ease-in-out infinite;
+  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    text-shadow 220ms ease;
+  padding: 0 0.02em;
+  cursor: pointer;
+}
+
+/* base floating motion */
+@keyframes te-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated-letter:hover {
+  transform: translateY(-20px) scale(1.14);
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  z-index: 10;
+  cursor: pointer;
+  animation: 0.6s forwards;
+}
+
+.animated-letter.punct {
+  animation-duration: 3s;
+  opacity: 0.98;
+}
+
+.animated-letter.separator {
+  animation: none !important;
+  transform: none !important;
+}

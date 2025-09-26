@@ -24,6 +24,7 @@
 }
 
 .projects {
+  background-color: var(--sectbg);
   border: 1.5px solid var(--stroke-color);
   padding: 1em 0.1em 0;
   width: 95%;
@@ -41,7 +42,7 @@
 }
 
 .project {
-  flex: 0 0 360px;
+  flex: 0 0 400px;
   height: 100%;
   padding: 1em;
   display: flex;
@@ -56,16 +57,27 @@
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  border: 1px solid var(--stroke-color);
+  border: 1.4px solid var(--outline);
   display: flex;
   background-color: var(--sectbg);
-
   justify-content: center;
+}
+
+.image:hover {
+  cursor: pointer;
+  border: 3px solid var(--headingColor);
+}
+
+.image img {
+  width: 100%;
+  border-radius: 15px;
 }
 .project h3 {
   font-family: var(--nameheader-font);
+  color: var(--stroke-color);
   font-weight: 500;
   font-size: clamp(1rem, 1.7vw, 1.5rem);
+  margin-bottom: 0.1em;
 }
 
 .hide {
