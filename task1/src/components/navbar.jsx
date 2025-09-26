@@ -39,14 +39,14 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
-            Projects
+            <a href="#projects">Projects</a>
           </motion.li>
           <motion.li
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.5 }}
           >
-            Contact
+            <a href="#contact">Contact</a>
           </motion.li>
         </ul>
       </motion.div>

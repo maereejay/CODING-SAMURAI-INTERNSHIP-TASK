@@ -32,8 +32,7 @@ export default function Section2() {
     useContext(MyContext);
 
   return (
-    <div className="section2">
-      {/* Section header */}
+    <div id="projects" className="section2">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +42,6 @@ export default function Section2() {
         Projects
       </motion.h2>
 
-      {/* Projects list */}
       <div className="projectsContainer">
         <div className="projects">
           {projects.map((project, i) => (
@@ -67,7 +65,6 @@ export default function Section2() {
         </div>
       </div>
 
-      {/* Selected project view */}
       <AnimatePresence mode="wait">
         {selectedProject && (
           <motion.div

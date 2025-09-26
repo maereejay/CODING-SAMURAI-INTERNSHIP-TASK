@@ -34,6 +34,10 @@
   --outline: #ffffff;
   --forminputColor: #2a2828c1;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .blob1,
 .blob2,
 .blob3,

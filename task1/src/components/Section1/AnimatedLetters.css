@@ -20,7 +20,6 @@
   cursor: pointer;
 }
 
-/* base floating motion */
 @keyframes te-float {
   0% {
     transform: translateY(0);

@@ -13,7 +13,6 @@ const slideInStack = {
 export default function Skills() {
   return (
     <div className="skills">
-      {/* Section Header */}
       <motion.h2
         variants={slideInStack}
         initial="hidden"
@@ -24,7 +23,6 @@ export default function Skills() {
         Skills
       </motion.h2>
 
-      {/* Skillbar */}
       <motion.div
         className="skillbar"
         initial="hidden"

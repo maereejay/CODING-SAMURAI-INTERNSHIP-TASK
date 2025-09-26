@@ -2,23 +2,47 @@ import "./section3.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 
 export default function Section3() {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_o0goemg",
+        "template_25kmdtr", // 🔑 from EmailJS
+        formRef.current,
+        "IISgd1ovlw4xvYTa-" // 🔑 from EmailJS
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          formRef.current.reset(); // clears form
+        },
+        (error) => {
+          console.error("EmailJS Error:", error.text);
+          alert("Something went wrong. Please try again.");
+        }
+      );
+  };
+
   return (
-    <div className="section3">
-      {/* Title */}
+    <div id="contact" className="section3">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ amount: 0.3 }} // 👈 removed "once"
+        viewport={{ amount: 0.3 }}
       >
         Contact Me
       </motion.h2>
 
       <div className="contactContainer">
         <div className="section3Content">
-          {/* FORM */}
           <motion.div
             className="form"
             initial={{ opacity: 0, x: -50 }}
@@ -26,7 +50,7 @@ export default function Section3() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ amount: 0.3 }}
           >
-            <form action="">
+            <form ref={formRef} onSubmit={sendEmail}>
               <motion.label
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +61,9 @@ export default function Section3() {
               </motion.label>
               <motion.input
                 type="text"
+                name="user_name"
                 placeholder="Name"
+                required
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -54,7 +80,9 @@ export default function Section3() {
               </motion.label>
               <motion.input
                 type="email"
+                name="user_email"
                 placeholder="Email"
+                required
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -71,6 +99,7 @@ export default function Section3() {
               </motion.label>
               <motion.input
                 type="text"
+                name="subject"
                 placeholder="Subject"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -87,9 +116,11 @@ export default function Section3() {
                 Message
               </motion.label>
               <motion.textarea
+                name="message"
                 cols="30"
                 rows="10"
                 placeholder="Message"
+                required
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
@@ -103,12 +134,11 @@ export default function Section3() {
                 transition={{ delay: 1, duration: 0.5 }}
                 viewport={{ amount: 0.3 }}
               >
-                <button>Submit</button>
+                <button type="submit">Submit</button>
               </motion.div>
             </form>
           </motion.div>
 
-          {/* INFOPLATE */}
           <motion.div
             className="infoplate"
             initial={{ opacity: 0, y: 50, scale: 0.9 }}

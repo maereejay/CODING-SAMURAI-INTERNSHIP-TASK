@@ -5,13 +5,7 @@ import AnimatedLetters from "./AnimatedLetters";
 import { motion } from "framer-motion";
 
 // React Icons
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaPython,
-  FaRobot,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPython, FaRobot } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiNextdotjs } from "react-icons/si";
 
@@ -20,7 +14,7 @@ const fadeInUp = {
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.4 + 0.8, ease: "easeOut" }, // shifted delay
+    transition: { duration: 0.6, delay: i * 0.4 + 0.8, ease: "easeOut" },
   }),
 };
 const fadeInLeft = {
@@ -28,7 +22,7 @@ const fadeInLeft = {
   visible: (i = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, delay: i * 0.4 + 1, ease: "easeOut" }, // intro later
+    transition: { duration: 0.8, delay: i * 0.4 + 1, ease: "easeOut" },
   }),
 };
 const fadeInRight = {
@@ -36,7 +30,7 @@ const fadeInRight = {
   visible: (i = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, delay: i * 0.4 + 0.6, ease: "easeOut" }, // illustration first
+    transition: { duration: 0.8, delay: i * 0.4 + 0.6, ease: "easeOut" },
   }),
 };
 const popIn = {
@@ -52,7 +46,6 @@ export default function Section1() {
   return (
     <div className="section1">
       <div className="Section1Container">
-        {/* Header */}
         <motion.div
           className="nameHeader"
           variants={fadeInUp}
@@ -66,7 +59,6 @@ export default function Section1() {
 
         <div className="sect1Content">
           <div className="aboutme">
-            {/* Intro */}
             <motion.div
               className="intro"
               variants={fadeInLeft}
@@ -78,7 +70,6 @@ export default function Section1() {
               <AnimatedLetters text="Full Stack Developer | UI/UX Enthusiast" />
             </motion.div>
 
-            {/* Description */}
             <motion.p
               className="description"
               variants={fadeInUp}
@@ -94,7 +85,6 @@ export default function Section1() {
               the boundaries of what I can create.
             </motion.p>
 
-            {/* Currently Learning */}
             <motion.div
               className="learning"
               initial="hidden"
@@ -117,7 +107,6 @@ export default function Section1() {
               </ul>
             </motion.div>
 
-            {/* CV Buttons */}
             <motion.div
               className="cv-buttons"
               initial="hidden"
@@ -125,7 +114,7 @@ export default function Section1() {
               viewport={{ amount: 0.3 }}
             >
               <motion.a
-                href="/MaryJaneCV.pdf"
+                href="/ONWUASOR MARY-JANE FULLSTACK DEV.pdf"
                 target="_blank"
                 className="btnView"
                 variants={popIn}
@@ -134,7 +123,7 @@ export default function Section1() {
                 View CV
               </motion.a>
               <motion.a
-                href="/MaryJaneCV.pdf"
+                href="/ONWUASOR MARY-JANE FULLSTACK DEV.pdf"
                 download
                 className="btnDownload"
                 variants={popIn}
@@ -144,7 +133,6 @@ export default function Section1() {
               </motion.a>
             </motion.div>
 
-            {/* Socials */}
             <motion.div
               className="firstSocials"
               initial="hidden"
@@ -152,9 +140,9 @@ export default function Section1() {
               viewport={{ amount: 0.3 }}
             >
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/maereejay"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 variants={popIn}
                 custom={8}
                 whileHover={{ scale: 1.2 }}
@@ -162,9 +150,9 @@ export default function Section1() {
                 <FaGithub className="socialIcon" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/onwuasor-mary-jane-289465248"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 variants={popIn}
                 custom={9}
                 whileHover={{ scale: 1.2 }}
@@ -172,27 +160,18 @@ export default function Section1() {
                 <FaLinkedin className="socialIcon" />
               </motion.a>
               <motion.a
-                href="mailto:yourmail@gmail.com"
+                href="mailto:maryjaneonwuasor@gmail.com?subject=Hello, I would like to work with you"
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={popIn}
                 custom={10}
                 whileHover={{ scale: 1.2 }}
               >
                 <MdEmail className="socialIcon" />
               </motion.a>
-              <motion.a
-                href="https://instagram.com/yourusername"
-                target="_blank"
-                rel="noreferrer"
-                variants={popIn}
-                custom={11}
-                whileHover={{ scale: 1.2 }}
-              >
-                <FaInstagram className="socialIcon" />
-              </motion.a>
             </motion.div>
           </div>
 
-          {/* Illustration */}
           <motion.div
             className="illustration"
             variants={fadeInRight}

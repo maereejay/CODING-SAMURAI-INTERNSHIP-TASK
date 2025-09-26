@@ -11,7 +11,6 @@ export default function Themetoggle() {
 
   return (
     <div className="themetoggle">
-      {/* Moon Icon */}
       <svg
         className={`themeicon moon ${theme === "dark" ? "activeMoon" : ""}`}
         onClick={() => handleToggle("dark")}
@@ -31,7 +30,6 @@ export default function Themetoggle() {
         />
       </svg>
 
-      {/* Sun Icon */}
       <svg
         className={`themeicon sun ${theme === "light" ? "activeSun" : ""}`}
         onClick={() => handleToggle("light")}

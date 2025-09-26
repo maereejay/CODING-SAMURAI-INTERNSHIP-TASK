@@ -59,10 +59,12 @@
   font-size: 100%;
   list-style: none;
   display: inline-block;
-  color: var(--white);
   transition: all ease-in-out 0.2s;
 }
-
+li a {
+  text-decoration: none;
+  color: var(--white);
+}
 .navlinks > ul > li:hover {
   color: var(--buttonText);
   cursor: pointer;
@@ -70,18 +72,17 @@
   border-bottom: 1.5px solid white;
 }
 
-/* 📱 Small devices (phones) */
 @media (max-width: 768px) {
   .Name {
     width: 70%;
   }
 
   .Name h1 {
-    font-size: 70%; /* reduce from 120% */
+    font-size: 70%;
   }
 
   .Name span {
-    font-size: 10px; /* reduce from 12px */
+    font-size: 10px;
   }
 
   .navlinks {
@@ -92,7 +93,7 @@
 
   .navlinks ul {
     display: flex;
-    flex-wrap: wrap; /* ✅ keeps li inside */
+    flex-wrap: wrap;
     justify-content: flex-start;
     width: auto;
     padding: 0;

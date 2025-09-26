@@ -21,7 +21,6 @@ export default function ProjectView() {
   return (
     <div className="projectView">
       <div className="projectviewContent">
-        {/* Slideshow Section */}
         <div className="projectviewImage">
           <img
             src={images[currentIndex]}
@@ -35,7 +34,6 @@ export default function ProjectView() {
           </button>
         </div>
 
-        {/* Description Section */}
         <div className="projectviewDescription">
           <h1>{selectedProject.name}</h1>
           <p>{selectedProject.description}</p>
@@ -49,7 +47,6 @@ export default function ProjectView() {
             </a>
           </div>
 
-          {/* Close Button */}
           <div className="close">
             <button onClick={() => setSelectedProject(null)}>Close</button>
           </div>
