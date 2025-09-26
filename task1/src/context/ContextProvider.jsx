@@ -57,8 +57,8 @@ export default function ContextProvider({ children }) {
       images: [ovenalc1, ovenalc2, ovenalc3, ovenalc4, ovenalc5],
       description:
         "A landing page for Oven Alchemy. It features a responsive design and a smooth scrolling experience. It is built using HTML, CSS, and JavaScript. It has a clean and modern design that is easy to navigate.",
-      liveLink: "https://example.com",
-      codeLink: "https://github.com/username/portfolio",
+      liveLink: "https://github.com/maereejay/oven-alchemy",
+      codeLink: "https://github.com/maereejay/oven-alchemy",
     },
     {
       id: 2,
@@ -73,8 +73,8 @@ export default function ContextProvider({ children }) {
       ],
       description:
         "A game where you need to type the words that appear on the screen. It is built using Reactjs. It features a game experience where you need to type the words that appear on the screen in order to reach the safe house and win the game.",
-      liveLink: "https://example.com/app",
-      codeLink: "https://github.com/username/coolapp",
+      liveLink: "https://zombie-type-six.vercel.app/",
+      codeLink: "https://github.com/maereejay/zombieType",
     },
     {
       id: 3,
@@ -90,8 +90,8 @@ export default function ContextProvider({ children }) {
       ],
       description:
         "A landing page for Farmhub. It features a responsive design and a smooth scrolling experience. It is built using HTML, CSS, and JavaScript. It has a clean and modern design that is easy to navigate.",
-      liveLink: "https://example.com/shop",
-      codeLink: "https://github.com/username/shop",
+      liveLink: "https://github.com/maereejay/FarmHub",
+      codeLink: "https://github.com/maereejay/FarmHub",
     },
     {
       id: 4,
@@ -112,8 +112,8 @@ export default function ContextProvider({ children }) {
       ],
       description:
         "A website for Budgetgeting.It features a responsive design and a smooth scrolling experience. It is built using HTML, CSS, and JavaScript. It has a clean and modern design that is easy to navigate.",
-      liveLink: "https://example.com/shop",
-      codeLink: "https://github.com/username/shop",
+      liveLink: "https://github.com/maereejay/budgetWise",
+      codeLink: "https://github.com/maereejay/budgetWise",
     },
     {
       id: 5,
@@ -129,9 +129,9 @@ export default function ContextProvider({ children }) {
         gamehub8,
       ],
       description:
-        "A landing page for Farmhub. It features a responsive design and a smooth scrolling experience. It is built using HTML, CSS, and JavaScript. It has a clean and modern design that is easy to navigate.",
-      liveLink: "https://example.com/shop",
-      codeLink: "https://github.com/username/shop",
+        "A game hub consisting of 3 games; rock paper scissors, tic tac toe and memory card gameIt features a responsive design and a smooth scrolling experience. It is built using HTML, CSS, and JavaScript. It has a clean and modern design that is easy to navigate.",
+      liveLink: "https://github.com/maereejay/lucy-game",
+      codeLink: "https://github.com/maereejay/lucy-game",
     },
   ];
 
