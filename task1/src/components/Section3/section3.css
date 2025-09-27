@@ -6,7 +6,7 @@
 .section3 {
   width: 93%;
   margin: 0 auto;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 .section3 h2 {
   font-family: var(--heading-font);
@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .section3Content {
@@ -213,8 +214,18 @@ form {
   height: 77%;
   color: var(--stroke-color);
 }
+.tagline {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--stroke-color);
+  font-family: var(--paragraph-font);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
 .attribution {
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .attribution a {

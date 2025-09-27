@@ -227,25 +227,53 @@ export default function Section3() {
                   Email
                 </a>
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              className="attribution"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              viewport={{ amount: 0.3 }}
-            >
-              <a
-                href="https://storyset.com/work"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div
+                className="attribution"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                viewport={{ amount: 0.3 }}
               >
-                Work illustrations by Storyset
-              </a>
+                <a
+                  href="https://storyset.com/work"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.div
+                    className="tagline"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    viewport={{ amount: 0.3 }}
+                  >
+                    <a
+                      href="https://storyset.com/work"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Building experiences, not just websites.
+                    </a>
+                  </motion.div>
+                </a>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
+        <motion.div
+          className="attribution"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          viewport={{ amount: 0.3 }}
+        >
+          <a
+            href="https://storyset.com/work"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Work illustrations by Storyset
+          </a>
+        </motion.div>
       </div>
     </div>
   );
