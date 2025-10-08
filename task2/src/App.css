@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap");
+
+:root {
+  --logo-font: "Quicksand", sans-serif;
+  --header-font: "Montserrat", sans-serif;
+  --button-font: "Raleway", sans-serif;
+  --heading-font: "Orbitron", sans-serif;
+  --paragraph-font: "Poppins", sans-serif;
+  --stroke-color: #fffbfb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: url(./Assets/379b7709-81a9-4dbc-9e0b-86611f0c8de1.jpg);
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Content {
+  width: 87%;
+  height: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

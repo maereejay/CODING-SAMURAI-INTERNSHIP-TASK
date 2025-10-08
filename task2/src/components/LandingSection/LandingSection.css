@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landingSection {
+  padding: 2% 2% 2% 3%;
+  background: url(../../Assets/_galaxy_stars_astronaunt_38055542_0.jfif)
+    no-repeat;
+  background-size: cover;
+  color: white;
+  height: 92vh;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  border: 2px solid var(--stroke-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 38px;
+  align-items: center;
+}
+.logo-container {
+  height: 10%;
+}
+
+.landingContent {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  margin-bottom: 6%;
+  margin-top: 6%;
+  text-align: center;
+}
+.heading h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 50px;
+}
+.input {
+  margin-bottom: 3%;
+  width: 30%;
+}
+.input input {
+  border: none;
+  background: rgba(255, 255, 255, 0.539);
+  padding: 4% 10%;
+  width: 100%;
+  color: black;
+  font-family: var(--paragraph-font);
+  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+  font-weight: 400;
+  border-radius: 3px;
+}
+.input input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.button button {
+  background-color: #182132;
+  border-radius: 5px;
+  border: 1.3px solid var(--stroke-color);
+  color: white;
+  padding: 0.8em 1.2em;
+  font-weight: bold;
+  font-family: var(--button-font);
+  cursor: pointer;
+  font-size: clamp(0.7rem, 2vw, 1.1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.button button:hover {
+  background-color: #182132b1;
+}
