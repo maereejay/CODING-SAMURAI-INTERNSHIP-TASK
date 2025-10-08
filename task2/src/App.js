@@ -1,15 +1,14 @@
 import "./App.css";
-import Forecast from "./components/Forecast/Forecast";
 import LandingSection from "./components/LandingSection/LandingSection";
 import TodayWeather from "./components/TodayWeather/TodayWeather";
-
+import { useAppContext } from "./context/AppContext";
 function App() {
+  const { showWeather } = useAppContext();
+
   return (
     <div className="App">
       <div className="Content">
-        {/* <Forecast /> */}
-        {/* <LandingSection /> */}
-        <TodayWeather />
+        {showWeather ? <TodayWeather /> : <LandingSection />}
       </div>
     </div>
   );

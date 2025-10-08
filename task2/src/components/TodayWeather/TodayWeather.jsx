@@ -84,36 +84,69 @@ export default function TodayWeather() {
             <h3>Lagos, Nigeria</h3>
             <div className="forecastContent">
               <div className="forecastTitle">
-                <span>Day</span>
-                <span>Temp</span>
-                <span>Clouds</span>
-                <span>Wind</span>
-                <span>Humidity</span>
-                <span>Note</span>
+                <span className="dayTitle">Day</span>
+                <span className="tempTitle">Temp</span>
+
+                <span className="windTitle">Wind</span>
+                <span className="humidityTitle">Humidity</span>
+                <span className="noteTitle">Note</span>
               </div>
               <div className="forecastCard">
-                <span>Tuesday</span>
-                <span>17°C</span>
-                <span>20%</span>
-                <span>9 km/h</span>
-                <span>70%</span>
-                <span>Cloudy</span>
+                <span className="forecastday">Tuesday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
               </div>
               <div className="forecastCard">
-                <span>Wednesday</span>
-                <span>17°C</span>
-                <span>20%</span>
-                <span>9 km/h</span>
-                <span>70%</span>
-                <span>Cloudy</span>
+                <span className="forecastday">Wednesday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
               </div>
               <div className="forecastCard">
-                <span>Thursday</span>
-                <span>17°C</span>
-                <span>20%</span>
-                <span>9 km/h</span>
-                <span>70%</span>
-                <span>Cloudy</span>
+                <span className="forecastday">Thursday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
+              </div>
+              <div className="forecastCard">
+                <span className="forecastday">Friday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
+              </div>
+              <div className="forecastCard">
+                <span className="forecastday">Saturday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
+              </div>
+              <div className="forecastCard">
+                <span className="forecastday">Friday</span>
+                <span className="forecastTemp">17°C</span>
+
+                <span className="forecastWind">9 km/h</span>
+                <span className="forecastHumidity">70%</span>
+                <span className="forecastNote">Cloudy</span>
+              </div>
+              <div className="weekNote">
+                <h4>Note</h4>
+                <p>
+                  This week is a cloudy week with only rainfall a bit on tuesday
+                  and wednesday expect rains and bring umbrella. Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Officia,
+                  molestiae.
+                </p>
               </div>
             </div>
           </div>

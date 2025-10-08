@@ -57,6 +57,7 @@
   font-size: clamp(0.8rem, 1.5vw, 1.3rem);
   font-weight: 400;
   border-radius: 3px;
+  position: relative;
 }
 .input input::placeholder {
   color: rgba(0, 0, 0, 0.6);
@@ -78,4 +79,35 @@
 
 .button button:hover {
   background-color: #182132b1;
+}
+.suggestionBox {
+  position: absolute;
+  width: 25%;
+  z-index: 10;
+  margin-top: 0.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.suggestions-list {
+  width: 98%;
+  color: black;
+  max-height: 150px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95);
+
+  font-family: var(--paragraph-font);
+  font-size: clamp(0.6rem, 1vw, 1rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
