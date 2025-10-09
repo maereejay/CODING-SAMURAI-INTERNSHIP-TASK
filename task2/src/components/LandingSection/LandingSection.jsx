@@ -6,9 +6,8 @@ import { useAppContext } from "../../context/AppContext";
 export default function LandingSection() {
   const { setShowWeather, setLocation } = useAppContext();
   const [value, setValue] = useState("");
-
   const [suggestions, setSuggestions] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   useEffect(() => {
     if (!value.trim()) {
@@ -17,7 +16,6 @@ export default function LandingSection() {
     }
 
     const delayDebounce = setTimeout(async () => {
-      setLoading(true);
       try {
         const res = await fetch(
           `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=${encodeURIComponent(
@@ -37,17 +35,29 @@ export default function LandingSection() {
       } catch (err) {
         console.error(err);
         setSuggestions([]);
-      } finally {
-        setLoading(false);
       }
-    }, 400); // wait 400ms after typing stops
+    }, 400);
 
     return () => clearTimeout(delayDebounce);
   }, [value]);
 
   const handleClick = () => {
     if (!value.trim()) return;
-    setLocation(value.trim());
+
+    if (selectedCity) {
+      setLocation({
+        label: `${selectedCity.city}, ${selectedCity.country}`,
+        lat: selectedCity.latitude,
+        lon: selectedCity.longitude,
+      });
+    } else {
+      setLocation({
+        label: value.trim(),
+        lat: null,
+        lon: null,
+      });
+    }
+
     setSuggestions([]);
     setShowWeather(true);
   };
@@ -55,6 +65,7 @@ export default function LandingSection() {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") handleClick();
   };
+
   return (
     <div className="landingSection">
       <div className="logo-container">
@@ -71,9 +82,13 @@ export default function LandingSection() {
             type="text"
             placeholder="Paris, France"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => {
+              setValue(e.target.value);
+              setSelectedCity(null);
+            }}
             onKeyDown={handleKeyDown}
           />
+
           {suggestions.length > 0 && (
             <div className="suggestionBox">
               <div className="suggestions-list">
@@ -83,6 +98,7 @@ export default function LandingSection() {
                     className="suggestion-item"
                     onClick={() => {
                       setValue(`${city.city}, ${city.country}`);
+                      setSelectedCity(city);
                       setSuggestions([]);
                     }}
                   >

@@ -4,7 +4,11 @@ const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [showWeather, setShowWeather] = useState(false);
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState({
+    label: "",
+    lat: null,
+    lon: null,
+  });
 
   return (
     <AppContext.Provider
